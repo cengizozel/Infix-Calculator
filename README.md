@@ -31,7 +31,7 @@ Once the program has the postfix expression, Algorithm leaves a big for loop in 
 <br />
 <br />
 Some Other Features<br />
-<br />
+
  - Supports the exponentiation [^] and modulo [%] operators.<br />
  - The ability to choose between entering one or two arguments in CMD.<br />
  - Error Handling (in OUTPUT.txt)<br />
