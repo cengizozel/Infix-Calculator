@@ -5,7 +5,7 @@ Using my own stack and queue implementations, this program program takes an inpu
   
 Source code files (The .java files inside of InfixCalculator\src folder):  
 
-Algorithm - After taking the necessary arguments, with the help of other classes, this will do the shunting-yard algorithm in order to get the postfix expression and get the answer.
+Algorithm - After taking the necessary arguments, with the help of other classes, this will do the shunting-yard algorithm in order to get the postfix expression and get the answer.</ b>
 Calculate - During the postfix evaluation in Algorithm.java if the token is an operator/logical and there already at least two numbers on the stack, this source code will take the necessary input and return the answer which will be added back to the stack (except '!' requires only one number in the stack).
 InfixCalculator - This is where the whole program starts running, it takes the infix expressions as input with the use of ReadText.java, and it is sent to Algorithm.java to start applying the algorithm.
 IsOperatorLogical - This takes a token as an argument and decides if it is an operator, a logical, or parenthesis. This is used when determining if there might be a syntax error caused my having an expression such as "3*/5" by comparing the current token with the previous one.
