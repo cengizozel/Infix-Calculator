@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.*;
 
-public class WriteText {
+public class WriteText { 
 	
 	private Formatter y;
 	
