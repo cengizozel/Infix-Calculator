@@ -57,7 +57,6 @@ public class InfixCalculator {
 		}
 		catch (Exception e) {
 		}
-
 		
 		// Reads and stores the input file first, so it can be sent to the class where the algorithm happens.
 		r.readFile(inputFile);
