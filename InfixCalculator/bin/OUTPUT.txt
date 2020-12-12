@@ -3,7 +3,7 @@ It will be "my_eval.txt" by default.
 
 EXPRESSION 1: 1+2
 ----------------------
-STACK: 
+STACK:
 +
 QUEUE:
 1 -> 2
