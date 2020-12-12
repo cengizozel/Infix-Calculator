@@ -11,12 +11,6 @@ public class InfixCalculator {
 		PrintStream out = new PrintStream(new FileOutputStream("OUTPUT.txt"));
 		System.setOut(out);
 		
-		System.out.println("Name: Cengiz Ozel            |");
-		System.out.println("Netid: cozel                 |");
-		System.out.println("Email: cozel@u.rochester.edu |");
-		System.out.println("Assignment: Project 1        |");
-		System.out.println("_____________________________|\n\n");
-		
 		ReadText r = new ReadText();
 		Algorithm s = new Algorithm();
 		
