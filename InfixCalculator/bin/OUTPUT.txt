@@ -1,0 +1,293 @@
+You can name the output file as a commandline argument.
+It will be "my_eval.txt" by default.
+
+EXPRESSION 1: 1+2
+----------------------
+STACK:
++
+QUEUE:
+1 -> 2
+POSTFIX EXPRESSION:
+1 -> 2 -> +
+----------------------
+ANSWER: 3.00
+Going again...
+
+
+EXPRESSION 2: 1+2-3*4
+----------------------
+STACK:
+*
+-
+QUEUE:
+1 -> 2 -> + -> 3 -> 4
+POSTFIX EXPRESSION:
+1 -> 2 -> + -> 3 -> 4 -> * -> -
+----------------------
+ANSWER: -9.00
+Going again...
+
+
+EXPRESSION 3: 1+2-3*4^5%6
+----------------------
+STACK:
+%
+-
+QUEUE:
+1 -> 2 -> + -> 3 -> 4 -> 5 -> ^ -> * -> 6
+POSTFIX EXPRESSION:
+1 -> 2 -> + -> 3 -> 4 -> 5 -> ^ -> * -> 6 -> % -> -
+----------------------
+ANSWER: 3.00
+Going again...
+
+
+EXPRESSION 4: 1+2-3*4^5%6=7
+----------------------
+STACK:
+=
+QUEUE:
+1 -> 2 -> + -> 3 -> 4 -> 5 -> ^ -> * -> 6 -> % -> - -> 7
+POSTFIX EXPRESSION:
+1 -> 2 -> + -> 3 -> 4 -> 5 -> ^ -> * -> 6 -> % -> - -> 7 -> =
+----------------------
+ANSWER: 0.00
+Going again...
+
+
+EXPRESSION 5: !(1+2-3*4^5%6=7)|(8=9)
+----------------------
+STACK:
+|
+!
+QUEUE:
+1 -> 2 -> + -> 3 -> 4 -> 5 -> ^ -> * -> 6 -> % -> - -> 7 -> = -> 8 -> 9 -> =
+POSTFIX EXPRESSION:
+1 -> 2 -> + -> 3 -> 4 -> 5 -> ^ -> * -> 6 -> % -> - -> 7 -> = -> 8 -> 9 -> = -> | -> !
+----------------------
+ANSWER: 1.00
+Going again...
+
+
+EXPRESSION 6: 1*2-4
+----------------------
+STACK:
+-
+QUEUE:
+1 -> 2 -> * -> 4
+POSTFIX EXPRESSION:
+1 -> 2 -> * -> 4 -> -
+----------------------
+ANSWER: -2.00
+Going again...
+
+
+EXPRESSION 7: 1*2-4
+----------------------
+STACK:
+-
+QUEUE:
+1 -> 2 -> * -> 4
+POSTFIX EXPRESSION:
+1 -> 2 -> * -> 4 -> -
+----------------------
+ANSWER: -2.00
+Going again...
+
+
+EXPRESSION 8: 1+3*5
+----------------------
+STACK:
+*
++
+QUEUE:
+1 -> 3 -> 5
+POSTFIX EXPRESSION:
+1 -> 3 -> 5 -> * -> +
+----------------------
+ANSWER: 16.00
+Going again...
+
+
+EXPRESSION 9: (1+3)*5
+----------------------
+STACK:
+*
+QUEUE:
+1 -> 3 -> + -> 5
+POSTFIX EXPRESSION:
+1 -> 3 -> + -> 5 -> *
+----------------------
+ANSWER: 20.00
+Going again...
+
+
+EXPRESSION 10: 1+3*5=(1+3)*5
+----------------------
+STACK:
+*
+=
+QUEUE:
+1 -> 3 -> 5 -> * -> + -> 1 -> 3 -> + -> 5
+POSTFIX EXPRESSION:
+1 -> 3 -> 5 -> * -> + -> 1 -> 3 -> + -> 5 -> * -> =
+----------------------
+ANSWER: 0.00
+Going again...
+
+
+EXPRESSION 11: (5=5)&(1|0)&(!1)
+----------------------
+STACK:
+&
+QUEUE:
+5 -> 5 -> = -> 1 -> 0 -> | -> & -> 1 -> !
+POSTFIX EXPRESSION:
+5 -> 5 -> = -> 1 -> 0 -> | -> & -> 1 -> ! -> &
+----------------------
+ANSWER: 0.00
+Going again...
+
+
+EXPRESSION 12: (5=5)&(1|0)&(!0)
+----------------------
+STACK:
+&
+QUEUE:
+5 -> 5 -> = -> 1 -> 0 -> | -> & -> 0 -> !
+POSTFIX EXPRESSION:
+5 -> 5 -> = -> 1 -> 0 -> | -> & -> 0 -> ! -> &
+----------------------
+ANSWER: 1.00
+Going again...
+
+
+EXPRESSION 13: (5=5)|(1|0)&(!1)
+----------------------
+STACK:
+&
+|
+QUEUE:
+5 -> 5 -> = -> 1 -> 0 -> | -> 1 -> !
+POSTFIX EXPRESSION:
+5 -> 5 -> = -> 1 -> 0 -> | -> 1 -> ! -> & -> |
+----------------------
+ANSWER: 1.00
+Going again...
+
+
+EXPRESSION 14: ((5=5)|(1|0))&(!1)
+----------------------
+STACK:
+&
+QUEUE:
+5 -> 5 -> = -> 1 -> 0 -> | -> | -> 1 -> !
+POSTFIX EXPRESSION:
+5 -> 5 -> = -> 1 -> 0 -> | -> | -> 1 -> ! -> &
+----------------------
+ANSWER: 0.00
+Going again...
+
+
+EXPRESSION 15: 
+Syntax Error: Empty line.
+Going again...
+
+
+EXPRESSION 16: (2+3))
+Syntax Error: Too many closing parentheses.
+Going again...
+
+
+EXPRESSION 17: ((2+3)
+Syntax Error: Too many opening parentheses.
+Going again...
+
+
+EXPRESSION 18: ()2/4)(
+Syntax Error: Parenthesis are not closed properly.
+Going again...
+
+
+EXPRESSION 19: (2*-5)
+Syntax error: Two operators/logicals cannot be next to each other.
+* and -
+Going again...
+
+
+EXPRESSION 20: (5/0)
+----------------------
+STACK:
+*
+(
+QUEUE:
+2 -> 4 -> / -> 2 -> 5 -> 0 -> /
+POSTFIX EXPRESSION:
+2 -> 4 -> / -> 2 -> 5 -> 0 -> / -> * -> (
+----------------------
+Syntax error: Cannot divide by zero.
+Going again...
+
+
+EXPRESSION 21: (!2)
+----------------------
+QUEUE:
+2 -> !
+POSTFIX EXPRESSION:
+2 -> !
+----------------------
+Syntax error: Logical expressions can only be 1 (true) or 0 (false).
+Going again...
+
+
+EXPRESSION 22: (2&3)
+----------------------
+QUEUE:
+2 -> 3 -> &
+POSTFIX EXPRESSION:
+2 -> 3 -> &
+----------------------
+Syntax error: Logical expressions can only be 1 (true) or 0 (false).
+Going again...
+
+
+EXPRESSION 23: (2|3)
+----------------------
+QUEUE:
+2 -> 3 -> |
+POSTFIX EXPRESSION:
+2 -> 3 -> |
+----------------------
+Syntax error: Logical expressions can only be 1 (true) or 0 (false).
+Going again...
+
+
+EXPRESSION 24: (one+two)
+Syntax Error: Cannot have letters.
+Going again...
+
+
+EXPRESSION 25: 2^2+3
+----------------------
+STACK:
++
+QUEUE:
+2 -> 2 -> ^ -> 3
+POSTFIX EXPRESSION:
+2 -> 2 -> ^ -> 3 -> +
+----------------------
+ANSWER: 7.00
+Going again...
+
+
+EXPRESSION 26: 2^(2+3)
+----------------------
+STACK:
+^
+QUEUE:
+2 -> 2 -> 3 -> +
+POSTFIX EXPRESSION:
+2 -> 2 -> 3 -> + -> ^
+----------------------
+ANSWER: 32.00
+FINISHED!
