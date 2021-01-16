@@ -4,6 +4,11 @@ Using my own stack and queue implementations, this program takes an input file c
 
 ## Demo
 
+### Running and getting the output file with results
+![github-infix](https://user-images.githubusercontent.com/60388555/104799336-50614a00-579c-11eb-8809-bd247b7ff1b7.png)
+
+### Secondary output file with more in-depth explanation with data structures
+![4](https://user-images.githubusercontent.com/60388555/104799344-6d961880-579c-11eb-86a9-f7fadd4569c1.PNG)
 
 ## File Descriptions  
   
